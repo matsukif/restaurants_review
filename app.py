@@ -62,13 +62,13 @@ def communicate():
     st.session_state["user_input"] = ""  # 入力欄を消去
 
 # ユーザーインターフェイスの構築
-st.title("このレストランがあなたのニーズを満たすか調査します")
+st.title("レストランがあなたのニーズを満たすか調査します")
 st.write("レストランの口コミを入力してください")
-st.write("概要、雰囲気、人気メニュー、接客態度の４つの観点で整理します")
-st.write("あなたのニーズを入力してください")
+st.write("最初に概要、雰囲気、人気メニュー、接客態度の４つの観点で整理します")
+st.write("次にあなたニーズを満たすか調査します")
 
 # ユーザーからの観点指定入力
-aspect_input = st.text_input("追加したい観点（例：ペット可否、コストパフォーマンス）", key="aspect_input")
+aspect_input = st.text_input("調査したいニーズを入力してください（例：ペット可否、子供がうるくさても大丈夫か）", key="aspect_input")
 
 if "user_input" not in st.session_state:
     st.session_state["user_input"] = ""
