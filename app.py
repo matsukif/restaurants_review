@@ -76,7 +76,7 @@ if "user_input" not in st.session_state:
 # ユーザーからの口コミ入力
 review_input = st.text_area("レストランの口コミ", key="review_input")
     
-if st.button("要約開始"):
+if st.button("調査開始"):
     
     st.session_state["user_input"] = review_input  # 追加する行
     #st.session_state["user_input"] = st.text_area("レストランの口コミ", key="user_input")  # ここに移動
